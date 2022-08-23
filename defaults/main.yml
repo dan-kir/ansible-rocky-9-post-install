@@ -1,0 +1,17 @@
+---
+upgrades_enabled: yes
+
+essential_packages:
+- zsh
+- ranger
+- zram-generator
+- tmux
+- neovim
+- vim
+- sudo
+- wget
+- curl
+- git
+- htop
+- gnupg
+- net-tools
