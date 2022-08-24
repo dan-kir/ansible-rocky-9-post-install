@@ -11,6 +11,7 @@ essential_packages:
 - sudo
 - wget
 - curl
+- tar
 - git
 - htop
 - gnupg
