@@ -54,12 +54,12 @@
     group: root
     mode: 0600
 
-#- name: Install Zram Swap
-#  ansible.builtin.copy:
-#    src: files/zramswap
-#    dest: "/etc/default/zramswap"
-#    owner: root
-#    group: root
-#    mode: 0644
-#  notify:
-#    - Restart zramswap
+- name: Install zram-generator conf
+  ansible.builtin.copy:
+    src: files/zram-generator.conf
+    dest: "/etc/systemd/zram-generator.conf"
+    owner: root
+    group: root
+    mode: 0644
+  notify:
+    - Start /dev/zram0

@@ -1,5 +1,6 @@
 ---
-- name: Restart zram-generator
+- name: Start /dev/zram0
   ansible.builtin.systemd:
-    name: zram-generator.service
-    state: restarted
+    daemon_reload: yes
+    name: /dev/zram0
+    state: started
